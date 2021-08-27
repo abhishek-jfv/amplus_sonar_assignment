@@ -1,0 +1,49 @@
+<link href="./style.css" rel="stylesheet" />
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous"
+/>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"
+></script>
+
+<div>
+    <div class="d-flex justify-content-center" style="margin-top: 100px">
+        <div style="width: 200px; margin-right: 20px">
+            <select class="form-select" id="solar_plant_uid" name="solar_plant_uid" aria-label="" placeholder="Select">
+                <option value="" selected disabled>Select Solar Plant</option>
+                <option value="501">501</option>
+                <option value="502">502</option>
+                <option value="503">503</option>
+            </select>
+        </div>
+        <div style="margin-right: 20px">
+            <input class="form-select" type="date" id="start_date" name="start_date" />
+        </div>
+        <div style="margin-right: 20px">
+            <input class="form-select" type="date" id="end_date" name="end_date" />
+        </div>
+        <button class="btn btn-primary" id="submit">Submit</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p class="form_error" style="display: none; color: red">Please fill all fields.</p>
+    </div>
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description"></p>
+    </figure>
+    <div class="loading" style="display: none">Loading&#8230;</div>
+</div>
+
+<script src="./script.js"></script>

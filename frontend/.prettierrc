@@ -1,0 +1,7 @@
+{
+    "singleQuote": false,
+    "printWidth": 160,
+    "tabWidth": 4,
+    "quoteProps": "preserve",
+    "proseWrap": "preserve"
+}
